@@ -546,7 +546,7 @@ class _ScrollablePositionedListState extends State<ScrollablePositionedList>
             (ItemPosition position) =>
                 position.itemLeadingEdge < 1 && position.itemTrailingEdge > 0);
     if (itemPositions.isNotEmpty) {
-      PageStorage.of(context).writeState(
+      PageStorage.of(context)?.writeState(
           context,
           itemPositions.reduce((value, element) =>
               value.itemLeadingEdge < element.itemLeadingEdge
